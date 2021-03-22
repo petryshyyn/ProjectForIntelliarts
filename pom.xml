@@ -5,13 +5,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.0.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>2.4.4</version>
 	</parent>
 	<groupId>com.company</groupId>
 	<artifactId>SpringApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringApplication</name>
+	<name>ProjectForIntelliarts</name>
 	<description>project for Intelliarts</description>
 
 	<properties>
@@ -64,6 +63,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<arguments>
+						<argument>--spring.profiles.active=dev</argument>
+					</arguments>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
