@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+
+<div class="container mt-5 mb-5">
+    <h1 align="center">remove cost</h1>
+    <form action="remove" method="post"><br>
+        <input type="date" name="date" placeholder="Input date" class="form-control"><br>
+        <button type="submit" class="btn btn-success">remove</button>
+        <br><br><h5 align="center"><span th:text="${again}"></span></h5>
+
+    </form>
+</div>
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

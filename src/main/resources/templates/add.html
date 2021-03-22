@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Web blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5 mb-5">
+    <h1 align="center">Add new expenses</h1>
+    <form action="add" method="post">
+        <input type="date" name="date" placeholder="Input date" class="form-control"><br>
+        <input type="number" name="amount" placeholder="Input amount" class="form-control"><br>
+        <p>Select a currency:</p>
+        <div>
+            <input type="radio" id="UAH" name="currency" value="UAH"
+                   checked>
+            <label for="UAH">UAH</label>
+        </div>
+
+        <div>
+            <input type="radio" id="USD" name="currency" value="USD">
+            <label for="USD">USD</label>
+        </div>
+
+        <div>
+            <input type="radio" id="EUR" name="currency" value="EUR">
+            <label for="EUR">EUR</label>
+        </div><br>
+        <input type="text" name="product" placeholder="Input product" class="form-control"><br>
+        <button type="submit" class="btn btn-success">Add cost</button>
+    </form>
+</div>
+
+<div th:insert="blocks/footer :: footer"></div>
+
+</body>
+</html>
